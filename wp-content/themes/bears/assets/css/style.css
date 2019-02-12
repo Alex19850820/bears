@@ -773,7 +773,7 @@ body{
     float: none !important;
   }
   .rd-navbar-mob-menu {
-    margin: -140px 70% !important;
+    margin: -170px 70% !important;
   }
 }
 @media screen and (min-width:200px) and (max-width:1024px) {
