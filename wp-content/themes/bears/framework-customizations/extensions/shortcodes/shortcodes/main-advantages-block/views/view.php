@@ -30,7 +30,7 @@
 		</div>
 		<div class="advantages-bonus">
 			<h2>+ bonus</h2>
-			<img src="<?php bloginfo('template_url')?>/assets/images/adv/bear_1.jpg">
+			<img src="<?php bloginfo('template_url')?>/assets/images/adv/bear_1.png">
 		</div>
 	</div>
 </section>
