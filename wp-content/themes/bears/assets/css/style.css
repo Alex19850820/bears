@@ -236,11 +236,11 @@ body{
   display: block;
 }
 .second-item-img img {
-  width: 304px;
+  /*width: 304px;*/
   height: 364px;
 }
 .second-item-img-first img {
-  width: 225px;
+  /*width: 225px;*/
   height: 270px;
   margin-top: 26%;
 }

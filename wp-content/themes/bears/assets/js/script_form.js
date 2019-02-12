@@ -65,8 +65,12 @@ $(document).ready(function () {
 		}
 	});
 	$(document).on('click', '.second-color', function () {
+		var path = $('#path_bears').val(),
+			id_block_image = $(this).attr('data-id'),
+			color_image = $(this).attr('data-color');
 		$('.second-color').removeClass('active');
 		$(this).addClass('active');
+		$('#'+ id_block_image).html('<img src="'+ path +'/'+ color_image +'_rose_bear.jpg">');
 	} );
 	$('.grid').imagesLoaded( function() {
 		$('.grid-preloader').css('display', 'none');

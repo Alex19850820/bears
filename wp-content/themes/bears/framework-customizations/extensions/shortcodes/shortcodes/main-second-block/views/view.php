@@ -15,36 +15,37 @@
 			<h2>Выбери своего мишку</h2>
 			<div class="row">
 				<div class="second-block-item">
-					<div class="second-item-img-first">
+					<input type="hidden" name="path_bear" id="path_bears" value="<?php bloginfo('template_url')?>/assets/images/bears/">
+					<div class="second-item-img-first" id="first">
 						<img  src="<?php bloginfo('template_url')?>/assets/images/bears/red_rose_bear_2.jpg">
 					</div>
 					<div class="second-item-info">
 						<span>Мишка из роз, 25см</span>
 						<span class="second-price-item">1490 руб. <s>2490 руб.</s></span>
 						<span class="second-color-item">Выбрать цвет:</span>
-						<span class="second-color red"><span></span></span>
-						<span class="second-color blue"><span></span></span>
-						<span class="second-color yellow"><span></span></span>
-						<span class="second-color green"><span></span></span>
-						<span class="second-color pink"><span></span></span>
-						<span class="second-color grey"><span></span></span>
+						<span data-id="first" data-color="red" class="second-color red"><span></span></span>
+						<span data-id="first" data-color="blue" class="second-color blue"><span></span></span>
+						<span data-id="first" data-color="yellow" class="second-color yellow"><span></span></span>
+						<span data-id="first" data-color="green" class="second-color green"><span></span></span>
+						<span data-id="first" data-color="pink" class="second-color pink"><span></span></span>
+						<span data-id="first" data-color="black" class="second-color grey"><span></span></span>
 						<button class="second-item-button">Купить сейчас</button>
 					</div>
 				</div>
 				<div class="second-block-item">
-					<div class="second-item-img">
+					<div class="second-item-img" id="second">
 						<img  src="<?php bloginfo('template_url')?>/assets/images/bears/red_rose_bear_2.jpg">
 					</div>
 					<div class="second-item-info">
 						<span>Мишка из роз, 40см</span>
 						<span class="second-price-item">2290 руб. <s>3490 руб.</s></span>
 						<span class="second-color-item">Выбрать цвет:</span>
-						<span class="second-color red"><span></span></span>
-						<span class="second-color blue"><span></span></span>
-						<span class="second-color yellow"><span></span></span>
-						<span class="second-color green"><span></span></span>
-						<span class="second-color pink"><span></span></span>
-						<span class="second-color grey"><span></span></span>
+						<span data-id="second" data-color="red" class="second-color red"><span></span></span>
+						<span data-id="second" data-color="blue" class="second-color blue"><span></span></span>
+						<span data-id="second" data-color="yellow" class="second-color yellow"><span></span></span>
+						<span data-id="second" data-color="green" class="second-color green"><span></span></span>
+						<span data-id="second" data-color="pink" class="second-color pink"><span></span></span>
+						<span data-id="second" data-color="black" class="second-color grey"><span></span></span>
 						<button class="second-item-button">Купить сейчас</button>
 					</div>
 				</div>
