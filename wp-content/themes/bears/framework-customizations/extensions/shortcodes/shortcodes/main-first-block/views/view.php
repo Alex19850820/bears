@@ -53,7 +53,7 @@
 				<h2>Заполните поля ниже</h2>
 				<span>и мы свяжемся с вами</span>
 				<input type="text" name="name" value="" placeholder="Ваше имя">
-				<input id="phone" type="tel" name="phone" value="" >
+				<input id="phone" type="tel" name="phone" value="" placeholder="Ваш телефон" >
 				<button class="first-form-button" id="send__form" data-form="first-form">Оставить заявку</button>
 				<p>Нажимая кнопку "Оставить заявку", <br> выс оглашаетесь с условиями передачи данных</p>
 			</form>
