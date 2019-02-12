@@ -766,7 +766,7 @@ body{
 
 @media screen and (min-width:200px) and (max-width:379px)  {
   .header {
-    height: 150px !important;
+    height: 180px !important;
   }
   .logo-head {
     margin: 0 auto !important;
@@ -779,6 +779,18 @@ body{
 @media screen and (min-width:200px) and (max-width:1024px) {
   .header-menu{
     display: none;
+  }
+  .header {
+    height: 100px;
+  }
+  .logo-head img {
+    display: block;
+    margin: 0 auto;
+  }
+  .logo-title {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
   }
   .event-block-item, .event-block-item img {
     margin: 0 auto !important;
