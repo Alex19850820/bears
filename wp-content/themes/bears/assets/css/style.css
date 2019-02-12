@@ -389,6 +389,8 @@ body{
 .event-block {
   width: 100%;
   display: block;
+  position: relative;
+  box-sizing: border-box;
 }
 .event-title {
   width: 100%;
@@ -433,6 +435,8 @@ body{
   width: 100%;
   display: block;
   height: 1080px;
+  position: relative;
+  box-sizing: border-box;
 }
 .delivery-title {
   display: block;
@@ -489,6 +493,8 @@ body{
 .gallery-block {
   width: 100%;
   display: block;
+  position: relative;
+  box-sizing: border-box;
 }
 .gallery-title {
   width: 100%;
@@ -777,6 +783,23 @@ body{
   }
 }
 @media screen and (min-width:200px) and (max-width:1024px) {
+  .first-block-info h2, .first-block-form h2,.second-block-info h2, .advantages-block-info h2, .delivery-title h2, .event-title h2, .gallery-title h2 {
+    font-size: 50px !important;
+  }
+  .advantages-bonus h2 {
+    font-size: 80px !important;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .advantages-block-info h2, .delivery-title h2 {
+    text-align: center;
+  }
+  .first-block-form, .delivery-block, .delivery-map-block {
+    height: auto !important;
+  }
+  .delivery-map-block {
+    margin-bottom: 20px !important;
+  }
   .header-menu{
     display: none;
   }
