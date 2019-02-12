@@ -56,12 +56,7 @@
 						<span>Панда</span>
 						<span class="second-price-item">2990 руб. <s>3990 руб.</s></span>
 						<span class="second-color-item">Выбрать цвет:</span>
-						<span class="second-color red"><span></span></span>
-						<span class="second-color blue"><span></span></span>
-						<span class="second-color yellow"><span></span></span>
-						<span class="second-color green"><span></span></span>
-						<span class="second-color pink"><span></span></span>
-						<span class="second-color grey"><span></span></span>
+						<span class="second-color grey active"><span></span></span>
 						<button class="second-item-button">Купить сейчас</button>
 					</div>
 				</div>

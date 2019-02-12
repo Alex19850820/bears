@@ -363,7 +363,8 @@ body{
   margin-left: 40px;
 }
 .advantages-block-item span {
-  font-family: 'Proxima Nova Lt';
+  font-family: 'Proxima Nova Cn Lt';
+  font-weight: 800;
   color: #000000;
   font-size: 18px;
   margin-left: 20px;
@@ -779,7 +780,15 @@ body{
   .header-menu{
     display: none;
   }
+  .event-block-item, .event-block-item img {
+    margin: 0 auto !important;
+  }
+  .event-block-img {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
   .event-block-info {
+    width: 100%;
     float: none !important;
   }
   .event-block-info-right {
