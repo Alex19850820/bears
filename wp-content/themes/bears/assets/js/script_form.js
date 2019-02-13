@@ -115,6 +115,10 @@ $(document).ready(function () {
 		//анимируем переход на расстояние - top за 1500 мс
 		$('body,html').animate({scrollTop: top}, 1500);
 	});
+	$('.map-block-button').click(function () {
+		$(this).parent().hide();
+		$('.map-block-map').show();
+	});
 	/*modal*/
 	p = $('.popup__overlay.modal')
 	modal_success = $('.popup__overlay.modal_success');

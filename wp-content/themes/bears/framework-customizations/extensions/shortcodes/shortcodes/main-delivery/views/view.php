@@ -65,7 +65,14 @@
 			</div>
 		</div>
 		<div class="delivery-map-block">
-			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7b96307713a6a61d315401924887aa4b1dfac7d286438d7d0b877d5e8b96047f&amp;width=585&amp;height=478&amp;lang=ru_UA&amp;scroll=true"></script>
+			<div class="map-block-image">
+				<button class="map-block-button">
+					Нажмите для отображения карты
+				</button>
+			</div>
+			<div class="map-block-map">
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7b96307713a6a61d315401924887aa4b1dfac7d286438d7d0b877d5e8b96047f&amp;width=585&amp;height=478&amp;lang=ru_UA&amp;scroll=true"></script>
+			</div>
 		</div>
 	</div>
 </section>
