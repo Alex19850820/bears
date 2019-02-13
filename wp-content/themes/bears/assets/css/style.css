@@ -520,7 +520,7 @@ body{
 }
 .gallery-block {
   width: 100%;
-  display: block;
+  display: inline-block;
   position: relative;
   box-sizing: border-box;
 }
@@ -907,6 +907,15 @@ body{
   }
   .advantages-block-info h2 {
     padding-top: 0 !important;
+  }
+  .delivery-block-address {
+    width: 100% !important;
+  }
+  .delivery-address-item {
+    margin: 20px auto;
+  }
+  .delivery-address-item span {
+    display: block;
   }
   .rd-navbar-mob-menu {
     display: flex !important;
