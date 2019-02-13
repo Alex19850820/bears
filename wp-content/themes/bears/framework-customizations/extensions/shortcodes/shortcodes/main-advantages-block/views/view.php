@@ -15,16 +15,28 @@
 			<h2>Преимущества</h2>
 			<div class="row">
 				<div class="advantages-block-item">
-					<img src="<?php bloginfo('template_url')?>/assets/images/adv/adv1.png">
-					<span>Мишки ручной работы</span>
+					<div class="advantages-block-img">
+						<img src="<?php bloginfo('template_url')?>/assets/images/adv/adv1.png">
+					</div>
+					<div class="advantages-block-text">
+						<span>Мишки ручной работы</span>
+					</div>
 				</div>
 				<div class="advantages-block-item">
-					<img src="<?php bloginfo('template_url')?>/assets/images/adv/adv2.png">
-					<span>Более 500 роз в каждом мишке</span>
+					<div class="advantages-block-img">
+						<img src="<?php bloginfo('template_url')?>/assets/images/adv/adv2.png">
+					</div>
+					<div class="advantages-block-text">
+						<span>Более 500 роз в каждом мишке</span>
+					</div>
 				</div>
 				<div class="advantages-block-item">
-					<img src="<?php bloginfo('template_url')?>/assets/images/adv/adv3.png">
-					<span>Дополнительный подарок к каждому мишке</span>
+					<div class="advantages-block-img">
+						<img src="<?php bloginfo('template_url')?>/assets/images/adv/adv3.png">
+					</div>
+					<div class="advantages-block-text">
+						<span>Дополнительный подарок к каждому мишке</span>
+					</div>
 				</div>
 			</div>
 		</div>
