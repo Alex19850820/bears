@@ -62,14 +62,14 @@ $contacts = fw_get_db_customizer_option();
 				</div>
 			</div>
 			<!--end-->
-<!--			COCIAL-->
-			<div class="side-pane">
-				<div class="soc-icons">
-					<a class="vb" href="viber://add?number=79652239463"></a>
-					<a class="wa" href="whatsapp://send?phone=79652239463"></a>
-					<a class="tg" href="tel:79652239463"></a>
-				</div>
-			</div>
-<!--			END-COCIAL-->
 		</div>
 	</header>
+	<!--			COCIAL-->
+	<div class="side-pane">
+		<div class="soc-icons">
+			<a class="vb" href="viber://add?number=79652239463"></a>
+			<a class="wa" href="whatsapp://send?phone=79652239463"></a>
+			<a class="tg" href="tel:79652239463"></a>
+		</div>
+	</div>
+	<!--			END-COCIAL-->

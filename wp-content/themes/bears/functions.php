@@ -186,6 +186,8 @@ function bears_scripts() {
 
 	wp_enqueue_script( 'bears-masonry', get_template_directory_uri() . '/assets/js/masonry.pkgd.min.js', [], '', true );
 	
+	wp_enqueue_script( 'bears-headhesive', get_template_directory_uri() . '/assets/js/headhesive.min.js', [], '', true );
+	
 	wp_enqueue_script( 'bears-js_script_form', get_template_directory_uri() . '/assets/js/script_form.js', [], '', true );
 	
 	/*
