@@ -1,4 +1,1 @@
-"# avtouzor" 
-"# avtouzor" 
-"# horizon" 
 "# bears" 
