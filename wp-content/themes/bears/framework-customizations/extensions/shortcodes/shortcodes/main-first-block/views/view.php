@@ -9,7 +9,7 @@
  **/
 
 ?>
-<section class="first-block" style="background: url(<?php bloginfo('template_url')?>/assets/images/fons/fon3.jpg) 50% center no-repeat;">
+<section class="first-block" style="background: url(<?php bloginfo('template_url')?>/assets/images/fons/fon3.jpg) 50% top no-repeat;">
 	<div class="container">
 		<div class="first-block-info">
 			<h2>Мишки из роз!</h2>

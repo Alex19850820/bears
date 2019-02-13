@@ -115,7 +115,7 @@ $(document).ready(function () {
 		//анимируем переход на расстояние - top за 1500 мс
 		$('body,html').animate({scrollTop: top}, 1500);
 	});
-	$('.map-block-button').click(function () {
+	$(document).on('click','.map-block-button', function () {
 		$('.map-block-image').hide();
 		$('.map-block-map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7b96307713a6a61d315401924887aa4b1dfac7d286438d7d0b877d5e8b96047f&amp;width=585&amp;height=478&amp;lang=ru_UA&amp;scroll=true"></script>').show();
 	});
