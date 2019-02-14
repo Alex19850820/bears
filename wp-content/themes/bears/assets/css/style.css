@@ -1115,7 +1115,7 @@ body{
   display: none;
 }
 .headhesive--stick{
-  transform: translateY(-62px);
+  transform: translateY(-25px);
   /*padding: 10px 0;*/
   /*background: rgba(0,0,0,0.77);*/
   color:#ffffff;
