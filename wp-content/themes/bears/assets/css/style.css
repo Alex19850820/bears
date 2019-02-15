@@ -180,6 +180,12 @@ body{
   width: 269px;
   border: none;
 }
+.form-button {
+  width: 100%;
+}
+.form-button button {
+  width: 100%;
+}
 .first-form-button {
   background: #fa6689;
   /*background: url("../../assets/images/ico/button.png");*/
