@@ -39,12 +39,12 @@
 						</div>
 						<p>Гиппоалергенные<br> материалы</p>
 					</div>
-					<div class="block-info-item">
-						<div class="info-item round">
-							<img  src="<?php bloginfo('template_url')?>/assets/images/service/cologne.png">
-						</div>
-						<p>Ароматизатор<br> в подарок</p>
-					</div>
+<!--					<div class="block-info-item">-->
+<!--						<div class="info-item round">-->
+<!--							<img  src="--><?php //bloginfo('template_url')?><!--/assets/images/service/cologne.png">-->
+<!--						</div>-->
+<!--						<p>Ароматизатор<br> в подарок</p>-->
+<!--					</div>-->
 				</div>
 			</div>
 		</div>
