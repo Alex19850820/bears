@@ -6,7 +6,7 @@ add_action( 'wp_ajax_nopriv_sendForm', 'sendForm' );
 function sendForm() {
 	if (isset($_POST )) {
 		// обрабатываем запрос
-		$adminEmail = get_option('admin_email');
+		$adminEmail = get_option('admin_email').',Muravev.es@yandex.ru';
 //		$adminEmail = '89261231522@mail.ru,
 //globus_estate@mail.ru';
 		$name = ($_POST['name'] == 'undefined') ? '' : $_POST['name'] ?? '' ;
