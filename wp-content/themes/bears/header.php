@@ -68,8 +68,8 @@ $contacts = fw_get_db_customizer_option();
 	<div class="side-pane">
 		<div class="soc-icons">
 			<a class="vb" href="viber://add?number=79652239463"></a>
-			<a class="wa" href="whatsapp://send?phone=79652239463"></a>
-			<a class="tg" href="tel:79652239463"></a>
+			<a class="wa" href="whatsapp://send?phone=+79652239463"></a>
+			<a class="tg" href="tg://resolve?domain=nikname"></a>
 		</div>
 	</div>
 	<!--			END-COCIAL-->
