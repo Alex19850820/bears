@@ -148,6 +148,7 @@ body{
   position: relative;
   box-sizing: border-box;
   margin: 50px auto;
+  z-index: 2;
 }
 .first-block-form form {
  background: #ffffff;
