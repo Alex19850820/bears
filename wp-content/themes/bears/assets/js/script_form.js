@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	$(document).on('click', '#send__form', function (e) {
+	$(document).on('click', '#send__form, #send__form__modal', function (e) {
 		e.preventDefault();
 		var id = '#' + $(this).attr('data-form') + '';
 		// var data = $('#'+id+'').serialize();
@@ -30,6 +30,15 @@ $(document).ready(function () {
 		if(site === '') {
 			alert('Введите Ваш сайт!');
 			return false;
+		}
+		if($(this).attr('data-id')) {
+			form_data.append('bear-id', $(this).attr('data-id'));
+		}
+		if($(this).attr('data-price')) {
+			form_data.append('price', $(this).attr('data-price'));
+		}
+		if($(this).attr('data-color')) {
+			form_data.append('color', $(this).attr('data-color'));
 		}
 		if(name !== '') {
 			form_data.append('action', 'sendForm');
@@ -68,9 +77,11 @@ $(document).ready(function () {
 		var path = $('#path_bears').val(),
 			id_block_image = $(this).attr('data-id'),
 			color_image = $(this).attr('data-color');
+		$(this).parent().find('button').attr('data-color', color_image);
 		$('.second-color').removeClass('active');
 		$(this).addClass('active');
 		$('#'+ id_block_image).html('<img src="'+ path +'/'+ color_image +'_rose_bear.jpg">');
+		$(this).find('button').attr('data-color', $(this).attr('data-color'));
 	} );
 	$('.grid').imagesLoaded( function() {
 		$('.grid-preloader').css('display', 'none');
@@ -122,6 +133,7 @@ $(document).ready(function () {
 	/*modal*/
 	p = $('.popup__overlay.modal')
 	modal_success = $('.popup__overlay.modal_success');
+	modal_error = $('.popup__overlay.modal_error');
 	$('#popup__toggle, #popup__toggle2').click(function() {
 		p.css('display', 'block')
 		$('#popup__toggle').hide();
@@ -141,6 +153,7 @@ $(document).ready(function () {
 	$('.popup__close').click(function() {
 		p.css('display', 'none');
 		modal_success.css('display', 'none');
+		modal_error.css('display', 'none');
 		$('#popup__toggle').show();
 	});
 	p.click(function () {
@@ -159,6 +172,13 @@ $(document).ready(function () {
 		$('.rd-nav-menu__right').css({'-webkit-transform':'translateX(1200px)'});
 		// $('.rd-nav-menu__right').css({'display':'none !important'});
 	});
+	$(document).on('click', '.second-item-button', function () {
+		var active = $('.active').attr('data-color');
+		$('#popup__toggle').click();
+		$('#send__form__modal').attr('data-price', $(this).attr('data-price'));
+		$('#send__form__modal').attr('data-color', $(this).attr('data-color'));
+		$('#send__form__modal').attr('data-id', $(this).attr('data-id'));
+	})
 });
 var options = {
 	offset:100

@@ -48,7 +48,7 @@ $contacts = fw_get_db_customizer_option();
 			<input name="name" type="text" placeholder="Имя">
 			<input name="phone" type="tel" id="phone2" placeholder="Телефон">
 			<div class="form-button">
-				<button id="send__form"  class="first-form-button" data-form="send_call_back" type="submit">Позвонить</button>
+				<button id="send__form__modal"  class="first-form-button" data-form="send_call_back" type="submit">Позвонить</button>
 			</div>
 		</form>
 	</div>
@@ -60,6 +60,15 @@ $contacts = fw_get_db_customizer_option();
 		<div class="popup__close">X</div>
 		<h2>Поздравляем</h2>
 		<p>Ваша заявка отправлена с Вами свяжутся в ближайшее время!</p>
+	</div>
+	<!--[if lt IE 9]>
+	<div class="popup__valignfix"></div><![endif]-->
+</div>
+<div class="popup__overlay modal_error">
+	<div class="popup">
+		<div class="popup__close">X</div>
+		<h2>Внимание</h2>
+		<p></p>
 	</div>
 	<!--[if lt IE 9]>
 	<div class="popup__valignfix"></div><![endif]-->

@@ -13,12 +13,33 @@ function sendForm() {
 		$phone = ($_POST['phone'] == 'undefined' ) ? '' : $_POST['phone'] ?? '' ;
 		$email = ($_POST['email'] == 'undefined') ? '' : $_POST['email'] ?? '' ;
 		$site = ($_POST['site'] == 'undefined') ? '' : $_POST['site'] ?? '';
+		if(isset($_POST['bear-id'])) {
+			$bear = ['first' => 'Мишка из роз, 25см', 'second' => 'Мишка из роз, 40см', 'third' => 'Панда'];
+			$color = ['red' => 'Красный', 'blue' => 'Синий', 'yellow' => 'Желтый', 'green' => 'Зеленый', 'pink' => 'Фиолетовый', 'black' => 'Черный', 'none' => 'Без цвета'];
+			$order = "<table>
+						<thead>
+							<tr>
+								<th>Название</th>
+								<th>Цвет</th>
+								<th>Цена</th>
+							</tr>
+						<thead>
+						<tbody>
+							<tr>
+								<td>".$bear[$_POST['bear-id']]."</td>
+								<td>".$color[$_POST['color']]."</td>
+								<td>".$_POST['price']." руб.</td>
+							</tr>
+						</tbody>
+					</table>";
+		}
 		
 		$message = '<h2>Заявка с '.get_bloginfo('description').' '.get_bloginfo('url').'</h2><br>';
 		$message .= 'Имя: ' . $name . '<br>';
 		$message .= ($phone)? 'Телефон: ' . $phone . '<br>' : '';
 		$message .= ($email)? 'E-mail: ' . $email . '<br>'  : '';
 		$message .= ($site) ? 'Сайт: ' . $site . '<br>' : '';
+		$message .= ($order) ? 'Закакз: ' . $order . '<br>' : '';
 		
 
 		if (wp_mail($adminEmail,'Заявка на обратный звонок c '.get_bloginfo('description').' '.get_bloginfo('url'), $message, 'content-type: text/html')) {

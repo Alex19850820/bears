@@ -29,7 +29,7 @@
 						<span data-id="first" data-color="green" class="second-color green"><span></span></span>
 						<span data-id="first" data-color="pink" class="second-color pink"><span></span></span>
 						<span data-id="first" data-color="black" class="second-color grey"><span></span></span>
-						<button class="second-item-button">Купить сейчас</button>
+						<button class="second-item-button" data-color="red" data-id="first" data-price="1490">Купить сейчас</button>
 					</div>
 				</div>
 				<div class="second-block-item">
@@ -46,7 +46,7 @@
 						<span data-id="second" data-color="green" class="second-color green"><span></span></span>
 						<span data-id="second" data-color="pink" class="second-color pink"><span></span></span>
 						<span data-id="second" data-color="black" class="second-color grey"><span></span></span>
-						<button class="second-item-button">Купить сейчас</button>
+						<button data-color="red" class="second-item-button" data-id="second" data-price="2290">Купить сейчас</button>
 					</div>
 				</div>
 				<div class="second-block-item">
@@ -57,8 +57,8 @@
 						<span>Панда</span>
 						<span class="second-price-item">2990 руб. <s>3990 руб.</s></span>
 						<span class="second-color-item">Выбрать цвет:</span>
-						<span class="second-color grey active"><span></span></span>
-						<button class="second-item-button">Купить сейчас</button>
+						<span data-id="third"  class="second-color grey"><span></span></span>
+						<button data-color="none" data-id="third" class="second-item-button" data-price="2290">Купить сейчас</button>
 					</div>
 				</div>
 			</div>
