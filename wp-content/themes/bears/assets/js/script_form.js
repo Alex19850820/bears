@@ -179,6 +179,9 @@ $(document).ready(function () {
 		$('#send__form__modal').attr('data-color', $(this).attr('data-color'));
 		$('#send__form__modal').attr('data-id', $(this).attr('data-id'));
 	})
+	$(document).on('click', '#fancy', function () {
+		$(this).prev('.grid-item__fancybox').click();
+	})
 });
 var options = {
 	offset:100
