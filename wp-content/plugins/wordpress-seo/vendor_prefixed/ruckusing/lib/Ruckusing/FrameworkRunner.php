@@ -2,6 +2,7 @@
 
 namespace YoastSEO_Vendor;
 
+<<<<<<< HEAD
 /**
  * Ruckusing
  *
@@ -94,6 +95,100 @@ class Ruckusing_FrameworkRunner
      * @param Ruckusing_Util_Logger An optional custom logger
      *
      * @return Ruckusing_FrameworkRunner
+=======
+/**
+ * Ruckusing
+ *
+ * @category  Ruckusing
+ * @package   Ruckusing
+ * @author    Cody Caughlan <codycaughlan % gmail . com>
+ * @link      https://github.com/ruckus/ruckusing-migrations
+ */
+/**
+ * Ruckusing_FrameworkRunner
+ *
+ * Primary work-horse class. This class bootstraps the framework by loading
+ * all adapters and tasks.
+ *
+ * @category Ruckusing
+ * @package  Ruckusing
+ * @author   Cody Caughlan <codycaughlan % gmail . com>
+ * @link     https://github.com/ruckus/ruckusing-migrations
+ */
+class Ruckusing_FrameworkRunner
+{
+    /**
+     * reference to our DB connection
+     *
+     * @var array
+     */
+    private $_db = null;
+    /**
+     * The currently active config
+     *
+     * @var array
+     */
+    private $_active_db_config;
+    /**
+     * Available DB config (e.g. test,development, production)
+     *
+     * @var array
+     */
+    private $_config = array();
+    /**
+     * Task manager
+     *
+     * @var Ruckusing_Task_Manager
+     */
+    private $_task_mgr = null;
+    /**
+     * adapter
+     *
+     * @var Ruckusing_Adapter_Base
+     */
+    private $_adapter = null;
+    /**
+     * current task name
+     *
+     * @var string
+     */
+    private $_cur_task_name = "";
+    /**
+     * task options
+     *
+     * @var string
+     */
+    private $_task_options = "";
+    /**
+     * Environment
+     * default is development
+     * but can also be one 'test', 'production', etc...
+     *
+     * @var string
+     */
+    private $_env = "development";
+    /**
+     * set up some defaults
+     *
+     * @var array
+     */
+    private $_opt_map = array('env' => 'development');
+    /**
+     * Flag to display help of task
+     * @see Ruckusing_FrameworkRunner::parse_args
+     *
+     * @var boolean
+     */
+    private $_showhelp = \false;
+    /**
+     * Creates an instance of Ruckusing_Adapters_Base
+     *
+     * @param array $config The current config
+     * @param array $argv   the supplied command line arguments
+     * @param Ruckusing_Util_Logger An optional custom logger
+     *
+     * @return Ruckusing_FrameworkRunner
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     public function __construct($config, $argv, \YoastSEO_Vendor\Ruckusing_Util_Logger $log = null)
     {
@@ -115,8 +210,13 @@ class Ruckusing_FrameworkRunner
         //initialize tasks
         $this->init_tasks();
     }
+<<<<<<< HEAD
     /**
      * Execute the current task
+=======
+    /**
+     * Execute the current task
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     public function execute()
     {
@@ -143,28 +243,49 @@ class Ruckusing_FrameworkRunner
         }
         return $output;
     }
+<<<<<<< HEAD
     /**
      * Get the current adapter
      *
      * @return object
+=======
+    /**
+     * Get the current adapter
+     *
+     * @return object
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     public function get_adapter()
     {
         return $this->_adapter;
     }
+<<<<<<< HEAD
     /**
      * Initialize the task manager
+=======
+    /**
+     * Initialize the task manager
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     public function init_tasks()
     {
         $this->_task_mgr = new \YoastSEO_Vendor\Ruckusing_Task_Manager($this->_adapter, $this->_config);
     }
+<<<<<<< HEAD
     /**
      * Get the current migration dir
      *
      * @param string $key the module key name
      *
      * @return string
+=======
+    /**
+     * Get the current migration dir
+     *
+     * @param string $key the module key name
+     *
+     * @return string
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     public function migrations_directory($key = '')
     {
@@ -184,10 +305,17 @@ class Ruckusing_FrameworkRunner
         }
         return $migration_dir . $this->_config['db'][$this->_env]['database'];
     }
+<<<<<<< HEAD
     /**
      * Get all migrations directory
      *
      * @return array
+=======
+    /**
+     * Get all migrations directory
+     *
+     * @return array
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     public function migrations_directories()
     {
@@ -205,10 +333,17 @@ class Ruckusing_FrameworkRunner
         }
         return $result;
     }
+<<<<<<< HEAD
     /**
      * Get the current db schema dir
      *
      * @return string
+=======
+    /**
+     * Get the current db schema dir
+     *
+     * @return string
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     public function db_directory()
     {
@@ -218,8 +353,13 @@ class Ruckusing_FrameworkRunner
         }
         return $path . $this->_config['db'][$this->_env]['database'];
     }
+<<<<<<< HEAD
     /**
      * Initialize the db
+=======
+    /**
+     * Initialize the db
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     public function initialize_db()
     {
@@ -231,8 +371,13 @@ class Ruckusing_FrameworkRunner
         //construct our adapter
         $this->_adapter = new $adapter($db, $this->logger);
     }
+<<<<<<< HEAD
     /**
      * Initialize the logger
+=======
+    /**
+     * Initialize the logger
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     public function initialize_logger()
     {
@@ -247,6 +392,7 @@ class Ruckusing_FrameworkRunner
             $this->logger = \YoastSEO_Vendor\Ruckusing_Util_Logger::instance($this->_config['log_dir'] . \DIRECTORY_SEPARATOR . $log_name);
         }
     }
+<<<<<<< HEAD
     /**
      * $argv is our complete command line argument set.
      * PHP gives us:
@@ -258,6 +404,19 @@ class Ruckusing_FrameworkRunner
      * to our task and they can deal with them as they see fit.
      *
      * @param array $argv the current command line arguments
+=======
+    /**
+     * $argv is our complete command line argument set.
+     * PHP gives us:
+     * [0] = the actual file name we're executing
+     * [1..N] = all other arguments
+     *
+     * Our task name should be at slot [1]
+     * Anything else are additional parameters that we can pass
+     * to our task and they can deal with them as they see fit.
+     *
+     * @param array $argv the current command line arguments
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     private function parse_args($argv)
     {
@@ -282,10 +441,17 @@ class Ruckusing_FrameworkRunner
         }
         $this->_task_options = $options;
     }
+<<<<<<< HEAD
     /**
      * Update the local schema to handle multiple records versus the prior architecture
      * of storing a single version. In addition take all existing migration files
      * and register them in our new table, as they have already been executed.
+=======
+    /**
+     * Update the local schema to handle multiple records versus the prior architecture
+     * of storing a single version. In addition take all existing migration files
+     * and register them in our new table, as they have already been executed.
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     public function update_schema_for_timestamps()
     {
@@ -315,11 +481,19 @@ class Ruckusing_FrameworkRunner
             }
         }
     }
+<<<<<<< HEAD
     /**
      * Set an option
      *
      * @param string $key   the key to set
      * @param string $value the value to set
+=======
+    /**
+     * Set an option
+     *
+     * @param string $key   the key to set
+     * @param string $value the value to set
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     private function set_opt($key, $value)
     {
@@ -328,8 +502,13 @@ class Ruckusing_FrameworkRunner
         }
         $this->_opt_map[$key] = $value;
     }
+<<<<<<< HEAD
     /**
      * Verify db config
+=======
+    /**
+     * Verify db config
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     private function verify_db_config()
     {
@@ -385,12 +564,21 @@ class Ruckusing_FrameworkRunner
             throw new \YoastSEO_Vendor\Ruckusing_Exception("Error: 'log_dir' is not set in config.", \YoastSEO_Vendor\Ruckusing_Exception::INVALID_CONFIG);
         }
     }
+<<<<<<< HEAD
     /**
      * Get the adapter class
      *
      * @param string $db_type the database type
      *
      * @return string
+=======
+    /**
+     * Get the adapter class
+     *
+     * @param string $db_type the database type
+     *
+     * @return string
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     private function get_adapter_class($db_type)
     {
@@ -408,6 +596,7 @@ class Ruckusing_FrameworkRunner
         }
         return $adapter_class;
     }
+<<<<<<< HEAD
     /**
      * DB adapters are classes in lib/Ruckusing/Adapter
      * and they follow the file name syntax of "<DB Name>/Base.php".
@@ -415,6 +604,15 @@ class Ruckusing_FrameworkRunner
      * See the function "get_adapter_class" in this class for examples.
      *
      * @param string $adapter_dir the adapter dir
+=======
+    /**
+     * DB adapters are classes in lib/Ruckusing/Adapter
+     * and they follow the file name syntax of "<DB Name>/Base.php".
+     *
+     * See the function "get_adapter_class" in this class for examples.
+     *
+     * @param string $adapter_dir the adapter dir
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     private function load_all_adapters($adapter_dir)
     {
@@ -434,15 +632,23 @@ class Ruckusing_FrameworkRunner
             }
         }
     }
+<<<<<<< HEAD
     /**
      * Return the usage of the task
      *
      * @return string
+=======
+    /**
+     * Return the usage of the task
+     *
+     * @return string
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
      */
     public function help()
     {
         // TODO: dynamically list all available tasks
         $output = <<<USAGE
+<<<<<<< HEAD
 
 \tUsage: php {$_SERVER['argv'][0]} <task> [help] [task parameters] [env=environment]
 
@@ -474,6 +680,39 @@ class Ruckusing_FrameworkRunner
 
 \t- db:schema : It can be beneficial to get a dump of the DB in raw SQL
 \tformat which represents the current version.
+=======
+
+\tUsage: php {$_SERVER['argv'][0]} <task> [help] [task parameters] [env=environment]
+
+\thelp: Display this message
+
+\tenv: The env command line parameter can be used to specify a different
+\tdatabase to run against, as specific in the configuration file
+\t(config/database.inc.php).
+\tBy default, env is "development"
+
+\ttask: In a nutshell, task names are pseudo-namespaced. The tasks that come
+\twith the framework are namespaced to "db" (e.g. the tasks are "db:migrate",
+\t"db:setup", etc).
+\tAll tasks available actually :
+
+\t- db:setup : A basic task to initialize your DB for migrations is
+\tavailable. One should always run this task when first starting out.
+
+\t- db:generate : A generic task which acts as a Generator for migrations.
+
+\t- db:migrate : The primary purpose of the framework is to run migrations,
+\tand the execution of migrations is all handled by just a regular ol' task.
+
+\t- db:version : It is always possible to ask the framework (really the DB)
+\twhat version it is currently at.
+
+\t- db:status : With this taks you'll get an overview of the already
+\texecuted migrations and which will be executed when running db:migrate
+
+\t- db:schema : It can be beneficial to get a dump of the DB in raw SQL
+\tformat which represents the current version.
+>>>>>>> 2cf4d24da03a7b990cad0a4500463bc0b712271a
 
 USAGE;
         return $output;

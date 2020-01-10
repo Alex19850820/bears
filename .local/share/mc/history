@@ -1,0 +1,23 @@
+[cmdline]
+0=
+
+[inpmc.fm.mkdir]
+0=distr
+
+[input-def]
+0=*
+
+[input2]
+0=/home/s/seoelement/mishka-iz-roz.su/public_html/distr/
+1=/home/s/seoelement/mishka-iz-roz.su/public_html/
+2=/home/s/seoelement/mishka-iz-roz.su/public_html/wp-config.php
+
+[Dir Hist New Right Panel]
+0=/home/s/seoelement/mishka-iz-roz.su
+1=/home/s/seoelement/mishka-iz-roz.su/public_html
+
+[Dir Hist New Left Panel]
+0=/home/s/seoelement/mishka-iz-roz.su/public_html/distr
+1=/home/s/seoelement/mishka-iz-roz.su
+2=/home/s/seoelement
+3=/home/s/seoelement/mishka-iz-roz.su/public_html
