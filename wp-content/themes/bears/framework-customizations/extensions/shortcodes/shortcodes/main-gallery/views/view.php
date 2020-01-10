@@ -29,9 +29,9 @@
 										</span>
 					</a>
 
-					<a href="#" rel="nofollow">
+					<span id="fancy" >
 						<img src="<?=$image['url']?>">
-					</a>
+					</span>
 					<!--					<img class="grid-item__img" src="" alt="Баннер">-->
 				</div>
 			<?php endforeach;?>
